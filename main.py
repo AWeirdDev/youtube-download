@@ -41,6 +41,9 @@ def tick():
             os.remove(f".video-cache/{v['i']}")
             del cache[k]
 
+@app.get("/")
+async def get():
+    return {"hello": "world"}
 
 @app.get("/api/v2/youtube")
 async def api_v2_youtube_mp4(q: str):
