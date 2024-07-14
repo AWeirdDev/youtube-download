@@ -103,7 +103,3 @@ async def api_v2_youtube_mp4(q: str):
         make_cache(q, vid)
 
     return Response(vid, media_type="video/mp4")
-
-
-if __name__ == "main":
-    uvicorn.run(app, port=8000)
