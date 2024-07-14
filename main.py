@@ -102,4 +102,5 @@ async def api_v2_youtube_mp4(q: str):
     return Response(vid, media_type="video/mp4")
 
 
-uvicorn.run(app, host="0.0.0.0", port=8000)
+if __name__ == "main":
+    uvicorn.run(app, port=8000)
